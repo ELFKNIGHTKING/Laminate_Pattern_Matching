@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laminate Visual Search</title>
+    <link
+      href="https://unpkg.com/cropperjs@1.5.13/dist/cropper.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Laminate Visual Search</h1>
+
+      <div class="upload-section">
+        <input type="file" id="imageInput" accept="image/*" />
+        <button id="searchBtn" type="button">Find Similar Laminates</button>
+      </div>
+
+      <div id="after-container">
+        <div id="preview-container" class="hidden" style="width: 700px; height: 700px; margin: 0 auto;">
+          <h3>Uploaded Image Preview</h3>
+          <img id="imagePreview" src="" alt="Image preview" style="max-width: 100%; max-height: 100%; display: block; margin: 0 auto;" />
+        </div>
+
+        <div id="results-container" class="hidden">
+          <h3>Top Matches</h3>
+          <div id="results"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Modal should be outside container -->
+    <div id="imageModal" class="modal hidden">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <script src="https://unpkg.com/cropperjs@1.5.13/dist/cropper.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

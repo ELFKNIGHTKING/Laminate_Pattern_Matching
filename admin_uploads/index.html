@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Laminate Upload</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Upload Laminate Image</h1>
+  <form id="uploadForm">
+  <input type="file" name="file" id="fileInput" accept="image/*" required><br><br>
+  <input type="text" name="laminate_id" id="laminateIdInput" placeholder="Laminate ID (number)" required><br><br>
+  <input type="text" name="segment_num" id="segmentNumInput" placeholder="Segment Number (0=main, 1–12=segment)" required><br><br>
+  <input type="text" name="name" id="nameInput" placeholder="Laminate Name" required><br><br>
+  <input type="text" name="color" id="colorInput" placeholder="Color"><br><br>
+  <input type="text" name="code" id="codeInput" placeholder="Code"><br><br>
+  <input type="text" name="metadata" id="metadataInput" placeholder='Metadata JSON e.g. {"collection":"2024"}'><br><br>
+  <button type="submit">Upload</button>
+</form>
+
+  <div class="preview">
+    <img id="previewImage" src="" alt="" hidden>
+    <div class="status" id="statusMessage"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
